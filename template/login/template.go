@@ -27,7 +27,7 @@ const loginTmpl = `{{define "login_theme1"}}
         <![endif]-->
 
     </head>
-    <body>
+    <body style="margin: 0; background-image: url('{{.BackgroudImage}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
 
     <div class="container">
         <div class="row" style="margin-top: 80px;">
@@ -51,10 +51,6 @@ const loginTmpl = `{{define "login_theme1"}}
                 </form>
             </div>
         </div>
-    </div>
-
-    <div id="particles-js">
-        <canvas class="particles-js-canvas-el" width="1606" height="1862" style="width: 100%; height: 100%;"></canvas>
     </div>
 
     <script src="{{link .CdnUrl .UrlPrefix "/assets/login/dist/all.min.js"}}"></script>
