@@ -289,6 +289,8 @@ type Config struct {
 	// Login page URL
 	LoginUrl string `json:"login_url,omitempty" yaml:"login_url,omitempty" ini:"login_url,omitempty"`
 
+	BackgroupImage string `json:"backgroup_image,omitempty" yaml:"backgroup_image,omitempty" ini:"backgroup_image,omitempty"`
+
 	// Debug mode
 	Debug bool `json:"debug,omitempty" yaml:"debug,omitempty" ini:"debug,omitempty"`
 
