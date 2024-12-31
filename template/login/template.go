@@ -27,7 +27,7 @@ const loginTmpl = `{{define "login_theme1"}}
         <![endif]-->
 
     </head>
-    <body style="margin: 0; background-image: url('{{.BackgroudImage}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+    <body style="margin: 0; background-image: url('{{.BackgroundImage}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
 
     <div class="container">
         <div class="row" style="margin-top: 80px;">

@@ -99,11 +99,12 @@ func (h *Handler) ShowLogin(ctx *context.Context) {
 	tmpl, name := template.GetComp("login").GetTemplate()
 	buf := new(bytes.Buffer)
 	if err := tmpl.ExecuteTemplate(buf, name, struct {
-		UrlPrefix string
-		Title     string
-		Logo      template2.HTML
-		CdnUrl    string
-		System    types.SystemInfo
+		UrlPrefix       string
+		Title           string
+		Logo            template2.HTML
+		CdnUrl          string
+		System          types.SystemInfo
+		BackgroundImage string
 	}{
 		UrlPrefix: h.config.AssertPrefix(),
 		Title:     h.config.LoginTitle,
@@ -111,7 +112,8 @@ func (h *Handler) ShowLogin(ctx *context.Context) {
 		System: types.SystemInfo{
 			Version: system.Version(),
 		},
-		CdnUrl: h.config.AssetUrl,
+		CdnUrl:          h.config.AssetUrl,
+		BackgroundImage: h.config.BackgroundImage,
 	}); err == nil {
 		ctx.HTML(http.StatusOK, buf.String())
 	} else {
