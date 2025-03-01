@@ -21,6 +21,12 @@ const loginTmpl = `{{define "login_theme1"}}
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="{{link .CdnUrl .UrlPrefix "/assets/login/dist/all.min.css"}}">
+        <style>
+          .main-header .logo {
+            float: none !important;
+            width: 100% !important;
+          }
+        </style>
 
         <!--[if lt IE 9]>
         <script src="{{link .CdnUrl .UrlPrefix "/assets/login/dist/respond.min.js"}}"></script>
